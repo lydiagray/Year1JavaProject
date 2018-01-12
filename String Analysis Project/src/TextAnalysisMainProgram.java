@@ -1,12 +1,39 @@
+import java.util.*;
 
 public class TextAnalysisMainProgram {
 	
 	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int programMode;	
 		
-		String testString = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, and where is the use of a book, thought Alice, without pictures or conversations? So she was considering in her own mind, (as well as she could, for the hot day made her feel very sleepy and stupid,) whether the pleasure of making a daisy-chain was worth the trouble of getting up and picking the daisies, when a white rabbit with pink eyes ran close by her.";
-		CharacterFrequencies.displayFrequencies(CharacterFrequencies.letterFrequencies(testString), CharacterFrequencies.charAlphabet);
-		CharacterFrequencies.displayFrequencies(CharacterFrequencies.nonAlphaNumericFrequencies(testString), CharacterFrequencies.charNonAlphaNumeric);
-		CharacterFrequencies.displayFrequencies(CharacterFrequencies.numberFrequencies(testString), CharacterFrequencies.charNumbers);
+		do {
+		UserInterface.modeSelection();
+		programMode = sc.nextInt();
+		
+		if (programMode == 1) {
+			System.out.println("This feature has not been released yet\r\nPlease try again later\r\n");
+		}
+		else if (programMode == 2) { 
+			System.out.println("Demo display of frequencies for a long string");	
+			CharacterFrequencies.displayFrequencies(CharacterFrequencies.letterFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charAlphabet);
+			CharacterFrequencies.displayFrequencies(CharacterFrequencies.nonAlphaNumericFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charNonAlphaNumeric);
+			CharacterFrequencies.displayFrequencies(CharacterFrequencies.numberFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charNumbers);
+		}
+		else if (programMode == 0) {
+			System.out.println("Thank you for using the LG Text Analysis Program\r\nGoodbye");
+		}
+		else {
+			System.out.println("You must select 1, 2 or 0");
+		}		
+	} while (programMode != 0);
+		
+
+
+//		
+//		String testShortString = "99037666 This! What is this? Why, this is a (short) string.";
+//		CharacterFrequencies.displayFrequencies(CharacterFrequencies.letterFrequencies(testShortString), CharacterFrequencies.charAlphabet);
+//		CharacterFrequencies.displayFrequencies(CharacterFrequencies.nonAlphaNumericFrequencies(testShortString), CharacterFrequencies.charNonAlphaNumeric);
+//		CharacterFrequencies.displayFrequencies(CharacterFrequencies.numberFrequencies(testShortString), CharacterFrequencies.charNumbers);
 		
 	}
 
