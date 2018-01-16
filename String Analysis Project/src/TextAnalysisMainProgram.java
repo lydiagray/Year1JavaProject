@@ -15,9 +15,9 @@ public class TextAnalysisMainProgram {
 		}
 		else if (programMode == 2) { 
 			System.out.println("Demo display of frequencies for a long string");	
-			CharacterFrequencies.displayFrequencies(CharacterFrequencies.letterFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charAlphabet);
-			CharacterFrequencies.displayFrequencies(CharacterFrequencies.nonAlphaNumericFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charNonAlphaNumeric);
-			CharacterFrequencies.displayFrequencies(CharacterFrequencies.numberFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charNumbers);
+			DisplayMethods.displayFrequencies(CharacterFrequencies.letterFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charAlphabet);
+			DisplayMethods.displayFrequencies(CharacterFrequencies.nonAlphaNumericFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charNonAlphaNumeric);
+			DisplayMethods.displayFrequencies(CharacterFrequencies.numberFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charNumbers);
 		}
 		else if (programMode == 0) {
 			System.out.println("Thank you for using the LG Text Analysis Program\r\nGoodbye");
