@@ -14,10 +14,13 @@ public class TextAnalysisMainProgram {
 			System.out.println("This feature has not been released yet\r\nPlease try again later\r\n");
 		}
 		else if (programMode == 2) { 
-			System.out.println("Demo display of frequencies for a long string");	
+			System.out.println("Demo display of frequencies for the following text:" + ProgramUnitTests.longString);	
 			DisplayMethods.displayFrequencies(CharacterFrequencies.letterFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charAlphabet);
+			DisplayMethods.barChartFrequencies(CharacterFrequencies.letterFrequencies(ProgramUnitTests.longString), DisplayMethods.capitalAlphabet);
 			DisplayMethods.displayFrequencies(CharacterFrequencies.nonAlphaNumericFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charNonAlphaNumeric);
+			DisplayMethods.barChartFrequencies(CharacterFrequencies.nonAlphaNumericFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charNonAlphaNumeric);			
 			DisplayMethods.displayFrequencies(CharacterFrequencies.numberFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charNumbers);
+			DisplayMethods.barChartFrequencies(CharacterFrequencies.numberFrequencies(ProgramUnitTests.longString), CharacterFrequencies.charNumbers);		
 		}
 		else if (programMode == 0) {
 			System.out.println("Thank you for using the LG Text Analysis Program\r\nGoodbye");
@@ -31,6 +34,7 @@ public class TextAnalysisMainProgram {
 
 //		
 //		String testShortString = "99037666 This! What is this? Why, this is a (short) string.";
+//		DisplayMethods.barChartFrequencies(CharacterFrequencies.letterFrequencies(testShortString), DisplayMethods.capitalAlphabet);
 //		CharacterFrequencies.displayFrequencies(CharacterFrequencies.letterFrequencies(testShortString), CharacterFrequencies.charAlphabet);
 //		CharacterFrequencies.displayFrequencies(CharacterFrequencies.nonAlphaNumericFrequencies(testShortString), CharacterFrequencies.charNonAlphaNumeric);
 //		CharacterFrequencies.displayFrequencies(CharacterFrequencies.numberFrequencies(testShortString), CharacterFrequencies.charNumbers);
